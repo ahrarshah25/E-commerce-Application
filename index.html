@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SwiftBasket</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark small-nav py-2">
+        <div class="container d-flex justify-content-between text-white small">
+            <span>Sell on SwiftBasket</span>
+            <span>Help & Contact</span>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3 sticky-top nav-animated">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <img src="/assets/logo.png" alt="logo" style="height:40px;" class="me-2">
+                <span class="brand-text">SwiftBasket</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav me-auto ms-4">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button"
+                            data-bs-toggle="dropdown">Categories</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Electronics</a></li>
+                            <li><a class="dropdown-item" href="#">Fashion</a></li>
+                            <li><a class="dropdown-item" href="#">Groceries</a></li>
+                            <li><a class="dropdown-item" href="#">Gift Items</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+                </ul>
+                <form class="d-flex mx-lg-3 mb-3 mb-lg-0 search-wrapper">
+                    <input class="form-control me-2" type="search"
+                        placeholder="Search for products, categories or shops">
+                    <button class="btn btn-success">Search</button>
+                </form>
+                <ul class="navbar-nav ms-lg-3">
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="login.html">Log In</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <div class="container-fluid hero-section d-flex align-items-center">
+                    <div class="row w-100 g-0 align-items-center">
+                        <div class="col-lg-6 p-5 slide-left">
+                            <h1 class="fw-bold display-5">Present<br>Your Products<br>to Millions</h1>
+                            <a class="btn btn-outline-success btn-lg mt-3" href="">Open a Shop Now</a>
+
+                            <div class="d-flex gap-3 mt-4 services">
+                                <div>🚚 Same Day Delivery on All Nairobi Orders</div>
+                                <div>💳 Pay with MPesa Online OR Upon Delivery</div>
+                                <div>📞 24/7 Kenyan-based customer service</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 slide-right">
+                            <img src="/assets/6911706.jpg" class="img-fluid rounded" alt="hero">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="container-fluid hero-section d-flex align-items-center">
+                    <div class="row w-100 g-0 align-items-center">
+                        <div class="col-lg-6 p-5 slide-left">
+                            <h1 class="fw-bold display-5">Sell Anything<br>Anywhere in Kenya</h1>
+                            <a class="btn btn-outline-success btn-lg mt-3" href="#">Start Selling</a>
+
+                            <div class="d-flex gap-3 mt-4 services">
+                                <div>✅ No monthly fees</div>
+                                <div>💰 Instant MPesa payments</div>
+                                <div>📦 Fast delivery partners</div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 slide-right">
+                            <img src="assets/6832220.jpg" class="img-fluid rounded" alt="hero">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <section class="container my-5">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+            <h3 class="fw-bold">Top Rated Products</h3>
+            <small class="text-muted">Best reviewed by customers</small>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-6 col-md-3">
+                <div class="card product-card lift-on-hover fade-up">
+                    <img src="https://via.placeholder.com/300x260?text=Top+Rated+1" class="card-img-top" alt="product1">
+                    <div class="card-body">
+                        <h6 class="card-title mb-1">Product Name 1</h6>
+                        <p class="text-muted small mb-2">Short brand / category</p>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-success btn-sm flex-fill">Buy Now</button>
+                            <button class="btn btn-outline-secondary btn-sm flex-fill">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card product-card lift-on-hover fade-up" style="animation-delay:0.08s">
+                    <img src="https://via.placeholder.com/300x260?text=Top+Rated+2" class="card-img-top" alt="product2">
+                    <div class="card-body">
+                        <h6 class="card-title mb-1">Product Name 2</h6>
+                        <p class="text-muted small mb-2">Short brand / category</p>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-success btn-sm flex-fill">Buy Now</button>
+                            <button class="btn btn-outline-secondary btn-sm flex-fill">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card product-card lift-on-hover fade-up" style="animation-delay:0.16s">
+                    <img src="https://via.placeholder.com/300x260?text=Top+Rated+3" class="card-img-top" alt="product3">
+                    <div class="card-body">
+                        <h6 class="card-title mb-1">Product Name 3</h6>
+                        <p class="text-muted small mb-2">Short brand / category</p>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-success btn-sm flex-fill">Buy Now</button>
+                            <button class="btn btn-outline-secondary btn-sm flex-fill">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-md-3">
+                <div class="card product-card lift-on-hover fade-up" style="animation-delay:0.24s">
+                    <img src="https://via.placeholder.com/300x260?text=Top+Rated+4" class="card-img-top" alt="product4">
+                    <div class="card-body">
+                        <h6 class="card-title mb-1">Product Name 4</h6>
+                        <p class="text-muted small mb-2">Short brand / category</p>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-success btn-sm flex-fill">Buy Now</button>
+                            <button class="btn btn-outline-secondary btn-sm flex-fill">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container my-5">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+            <h3 class="fw-bold">New Arrivals</h3>
+            <small class="text-muted">Fresh products just in</small>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-12 col-md-4">
+                <div class="card h-100 lift-on-hover fade-up" style="animation-delay:0.02s">
+                    <img src="https://via.placeholder.com/520x320?text=New+1" class="card-img-top" alt="new1">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">New Product 1</h5>
+                        <p class="card-text text-muted small">A short description that highlights features and why
+                            buyers love it.</p>
+                        <div class="mt-auto d-flex gap-2">
+                            <button class="btn btn-success flex-fill">Buy Now</button>
+                            <button class="btn btn-outline-secondary flex-fill">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="card h-100 lift-on-hover fade-up" style="animation-delay:0.1s">
+                    <img src="https://via.placeholder.com/520x320?text=New+2" class="card-img-top" alt="new2">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">New Product 2</h5>
+                        <p class="card-text text-muted small">A short description that highlights features and why
+                            buyers love it.</p>
+                        <div class="mt-auto d-flex gap-2">
+                            <button class="btn btn-success flex-fill">Buy Now</button>
+                            <button class="btn btn-outline-secondary flex-fill">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="card h-100 lift-on-hover fade-up" style="animation-delay:0.18s">
+                    <img src="https://via.placeholder.com/520x320?text=New+3" class="card-img-top" alt="new3">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">New Product 3</h5>
+                        <p class="card-text text-muted small">A short description that highlights features and why
+                            buyers love it.</p>
+                        <div class="mt-auto d-flex gap-2">
+                            <button class="btn btn-success flex-fill">Buy Now</button>
+                            <button class="btn btn-outline-secondary flex-fill">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container my-5">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+            <h3 class="fw-bold">Top Sellers</h3>
+            <small class="text-muted">Most popular brands</small>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-12 col-md-4">
+                <div class="d-flex gap-3 align-items-start lift-on-hover fade-up" style="animation-delay:0.03s">
+                    <img src="https://via.placeholder.com/120x80?text=Brand+1" alt="brand1" class="rounded">
+                    <div>
+                        <h6 class="mb-1">Brand Name A</h6>
+                        <div class="stars mb-1">★★★★★</div>
+                        <p class="small text-muted mb-0">Short description of the company's top selling items.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="d-flex gap-3 align-items-start lift-on-hover fade-up" style="animation-delay:0.08s">
+                    <img src="https://via.placeholder.com/120x80?text=Brand+2" alt="brand2" class="rounded">
+                    <div>
+                        <h6 class="mb-1">Brand Name B</h6>
+                        <div class="stars mb-1">★★★★☆</div>
+                        <p class="small text-muted mb-0">Short description of the company's top selling items.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="d-flex gap-3 align-items-start lift-on-hover fade-up" style="animation-delay:0.13s">
+                    <img src="https://via.placeholder.com/120x80?text=Brand+3" alt="brand3" class="rounded">
+                    <div>
+                        <h6 class="mb-1">Brand Name C</h6>
+                        <div class="stars mb-1">★★★★★</div>
+                        <p class="small text-muted mb-0">Short description of the company's top selling items.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="subscribe-strip py-5">
+        <div class="container">
+            <div class="row align-items-center g-3">
+                <div class="col-md-6 text-white">
+                    <h4 class="mb-1">Stay updated — special offers & new arrivals</h4>
+                    <p class="mb-0">Subscribe to our newsletter and be the first to know.</p>
+                </div>
+                <div class="col-md-6">
+                    <form class="d-flex gap-2">
+                        <input type="email" class="form-control" placeholder="Your email address">
+                        <button class="btn btn-dark">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-light pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="mb-3">SwiftBasket</h5>
+                    <p class="text-muted small">Your marketplace to reach millions. Replace this with your description
+                        and contact info.</p>
+                    <div class="d-flex gap-2 fs-4">
+                        <span title="phone">📞</span>
+                        <span title="email">✉️</span>
+                        <span title="location">📍</span>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <h6>Shop</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-decoration-none text-muted">All Products</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Categories</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Top Rated</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2">
+                    <h6>Company</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-decoration-none text-muted">About</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Careers</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2">
+                    <h6>Support</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-decoration-none text-muted">Help Center</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Contact</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Returns</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2">
+                    <h6>Follow</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-decoration-none text-muted">Facebook</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Twitter</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-top mt-4 pt-3 small text-muted d-flex justify-content-between">
+                <div>&copy; <span id="year">2025</span> SkyGarden. All rights reserved.</div>
+                <div>Made By <a href="https://github.com/ahrarshah25" class="text-black">Ahrar Shah</a></div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"></script>
+
+</html>

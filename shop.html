@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Products — SwiftBasket</title>
+    <link rel="stylesheet" href="/css/shop.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="shortcut icon" href="/assets/logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark small-nav py-2">
+        <div class="container d-flex justify-content-between text-white small">
+            <span>Sell on SwiftBasket</span>
+            <span>Help & Contact</span>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3 sticky-top nav-animated">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <img src="/assets/logo.png" alt="logo" style="height:40px;" class="me-2">
+                <span class="brand-text">SwiftBasket</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav me-auto ms-4">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button"
+                            data-bs-toggle="dropdown">Categories</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Electronics</a></li>
+                            <li><a class="dropdown-item" href="#">Fashion</a></li>
+                            <li><a class="dropdown-item" href="#">Groceries</a></li>
+                            <li><a class="dropdown-item" href="#">Gift Items</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+                </ul>
+                <form class="d-flex mx-lg-3 mb-3 mb-lg-0 search-wrapper">
+                    <input class="form-control me-2" type="search"
+                        placeholder="Search for products, categories or shops">
+                    <button class="btn btn-success">Search</button>
+                </form>
+                <ul class="navbar-nav ms-lg-3">
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="login.html">Log In</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="shop-section">
+        <h2 class="shop-title fade-up">Explore Our Products</h2>
+
+        <div class="container">
+            <div class="row g-4 d-flex flex-wrap">
+                <div class="col-md-6 col-lg-3 fade-up" data-name="Head & Shoulders Shampoo" data-category="groceries">
+                    <div class="card h-100">
+                        <img src="/assets/shampo.png" class="card-img-top" alt="Head & Shoulders Shampoo">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Head & Shoulders Shampoo</h5>
+                            <p class="card-text flex-grow-1">Anti-dandruff shampoo with cooling menthol sensation.</p>
+                            <h4 class="product-price">Rs. 899</h4>
+                            <div class="d-flex gap-2">
+                                <button class="btn-green w-50" onclick="userCart('Head & Shoulders Shampoo')">Add to Cart</button>
+                                <button class="btn-outline-green w-50" onclick="userProduct('Head & Shoulders Shampoo')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 fade-up">
+                    <div class="card h-100">
+                        <img src="/assets/earbuds.png" class="card-img-top" alt="Wireless Earbuds">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Wireless Earbuds</h5>
+                            <p class="card-text flex-grow-1">Bluetooth earbuds with noise cancellation feature.</p>
+                            <h4 class="product-price">Rs. 2,499</h4>
+                            <div class="d-flex gap-2">
+                                <button class="btn-green w-50" onclick="userCart('Wireless Earbuds')">Add to Cart</button>
+                                <button class="btn-outline-green w-50" onclick="userProduct('Wireless Earbuds')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 fade-up">
+                    <div class="card h-100">
+                        <img src="/assets/colgate.png" class="card-img-top" alt="Colgate Toothpaste">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Colgate Toothpaste</h5>
+                            <p class="card-text flex-grow-1">Fluoride toothpaste for strong teeth and fresh breath.</p>
+                            <h4 class="product-price">Rs. 249</h4>
+                            <div class="d-flex gap-2">
+                                <button class="btn-green w-50" onclick="userCart('Colgate Toothpaste')">Add to Cart</button>
+                                <button class="btn-outline-green w-50" onclick="userProduct('Colgate Toothpaste')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 fade-up">
+                    <div class="card h-100">
+                        <img src="/assets/fair&lovely.png" class="card-img-top" alt="Fair & Lovely Cream">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Fair & Lovely Cream</h5>
+                            <p class="card-text flex-grow-1">Skin lightening cream with multivitamins.</p>
+                            <h4 class="product-price">Rs. 199</h4>
+                            <div class="d-flex gap-2">
+                                <button class="btn-green w-50" onclick="userCart('Fair & Lovely Cream')">Add to Cart</button>
+                                <button class="btn-outline-green w-50" onclick="userProduct('Fair & Lovely Cream')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 fade-up">
+                    <div class="card h-100">
+                        <img src="/assets/milkpack.png" class="card-img-top" alt="Nestle Milk Pack 1L">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Nestle Milk Pack 1L</h5>
+                            <p class="card-text flex-grow-1">Full cream UHT milk for daily health.</p>
+                            <h4 class="product-price">Rs. 250</h4>
+                            <div class="d-flex gap-2">
+                                <button class="btn-green w-50" onclick="userCart('Nestle Milk Pack 1L')">Add to Cart</button>
+                                <button class="btn-outline-green w-50" onclick="userProduct('Nestle Milk Pack 1L')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 fade-up">
+                    <div class="card h-100">
+                        <img src="/assets/dove.png" class="card-img-top" alt="Dove Moisturizing Soap">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Dove Moisturizing Soap</h5>
+                            <p class="card-text flex-grow-1">Gentle soap for soft and smooth skin.</p>
+                            <h4 class="product-price">Rs. 120</h4>
+                            <div class="d-flex gap-2">
+                                <button class="btn-green w-50" onclick="userCart('Dove Moisturizing Soap')">Add to Cart</button>
+                                <button class="btn-outline-green w-50" onclick="userProduct('Dove Moisturizing Soap')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 fade-up">
+                    <div class="card h-100">
+                        <img src="/assets/chocolate.png" class="card-img-top" alt="Galaxy Chocolate Bar">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Galaxy Chocolate Bar</h5>
+                            <p class="card-text flex-grow-1">Silky smooth milk chocolate treat.</p>
+                            <h4 class="product-price">Rs. 150</h4>
+                            <div class="d-flex gap-2">
+                                <button class="btn-green w-50" onclick="userCart('Galaxy Chocolate Bar')">Add to Cart</button>
+                                <button class="btn-outline-green w-50" onclick="userProduct('Galaxy Chocolate Bar')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 fade-up">
+                    <div class="card h-100">
+                        <img src="/assets/iphone.png" class="card-img-top" alt="Apple iPhone 13">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Apple iPhone 13</h5>
+                            <p class="card-text flex-grow-1">256GB, Super Retina XDR display smartphone.</p>
+                            <h4 class="product-price">Rs. 329,999</h4>
+                            <div class="d-flex gap-2">
+                                <button class="btn-green w-50" onclick="userCart('Apple iPhone 13')">Add to Cart</button>
+                                <button class="btn-outline-green w-50" onclick="userProduct('Apple iPhone 13')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 fade-up">
+                    <div class="card h-100">
+                        <img src="/assets/laptop.png" class="card-img-top" alt="HP Laptop 15s">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">HP Laptop 15s</h5>
+                            <p class="card-text flex-grow-1">Intel i5, 8GB RAM, 512GB SSD with Windows 11.</p>
+                            <h4 class="product-price">Rs. 154,999</h4>
+                            <div class="d-flex gap-2">
+                                <button class="btn-green w-50" onclick="userCart('HP Laptop 15s')">Add to Cart</button>
+                                <button class="btn-outline-green w-50" onclick="userProduct('HP Laptop 15s')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 fade-up">
+                    <div class="card h-100">
+                        <img src="/assets/led.png" class="card-img-top" alt="Samsung 55” LED TV">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Samsung 55” LED TV</h5>
+                            <p class="card-text flex-grow-1">Smart UHD TV with voice assistant feature.</p>
+                            <h4 class="product-price">Rs. 124,999</h4>
+                            <div class="d-flex gap-2">
+                                <button class="btn-green w-50" onclick="userCart('Samsung 55” LED TV')">Add to Cart</button>
+                                <button class="btn-outline-green w-50" onclick="userProduct('Samsung 55” LED TV')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 fade-up">
+                    <div class="card h-100">
+                        <img src="/assets/shoes.png" class="card-img-top" alt="Nike Running Shoes">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Nike Running Shoes</h5>
+                            <p class="card-text flex-grow-1">Lightweight and breathable sports shoes.</p>
+                            <h4 class="product-price">Rs. 13,999</h4>
+                            <div class="d-flex gap-2">
+                                <button class="btn-green w-50" onclick="userCart('Nike Running Shoes')">Add to Cart</button>
+                                <button class="btn-outline-green w-50" onclick="userProduct('Nike Running Shoes')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 fade-up">
+                    <div class="card h-100">
+                        <img src="/assets/back.png" class="card-img-top" alt="School Backpack">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">School Backpack</h5>
+                            <p class="card-text flex-grow-1">Durable lightweight backpack with multiple compartments.</p>
+                            <h4 class="product-price">Rs. 1,499</h4>
+                            <div class="d-flex gap-2">
+                                <button class="btn-green w-50" onclick="userCart('School Backpack')">Add to Cart</button>
+                                <button class="btn-outline-green w-50" onclick="userProduct('School Backpack')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 fade-up">
+                    <div class="card h-100">
+                        <img src="/assets/glasses.png" class="card-img-top" alt="Ray-Ban Sunglasses">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Ray-Ban Sunglasses</h5>
+                            <p class="card-text flex-grow-1">Stylish UV protected sunglasses with case.</p>
+                            <h4 class="product-price">Rs. 7,999</h4>
+                            <div class="d-flex gap-2">
+                                <button class="btn-green w-50" onclick="userCart('Ray-Ban Sunglasses')">Add to Cart</button>
+                                <button class="btn-outline-green w-50" onclick="userProduct('Ray-Ban Sunglasses')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 fade-up">
+                    <div class="card h-100">
+                        <img src="/assets/speaker.png" class="card-img-top" alt="JBL Bluetooth Speaker">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">JBL Bluetooth Speaker</h5>
+                            <p class="card-text flex-grow-1">Portable speaker with deep bass and long battery life.</p>
+                            <h4 class="product-price">Rs. 9,799</h4>
+                            <div class="d-flex gap-2">
+                                <button class="btn-green w-50" onclick="userCart('JBL Bluetooth Speaker')">Add to Cart</button>
+                                <button class="btn-outline-green w-50" onclick="userProduct('JBL Bluetooth Speaker')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 fade-up">
+                    <div class="card h-100">
+                        <img src="/assets/ac.png" class="card-img-top" alt="Haier AC 1 Ton">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Haier AC 1 Ton</h5>
+                            <p class="card-text flex-grow-1">Inverter split air conditioner with energy-saving features.</p>
+                            <h4 class="product-price">Rs. 82,999</h4>
+                            <div class="d-flex gap-2">
+                                <button class="btn-green w-50" onclick="userCart('Haier AC 1 Ton')">Add to Cart</button>
+                                <button class="btn-outline-green w-50" onclick="userProduct('Haier AC 1 Ton')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 fade-up">
+                    <div class="card h-100">
+                        <img src="/assets/powerbank.png" class="card-img-top" alt="Anker Power Bank 20000mAh">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Anker Power Bank 20000mAh</h5>
+                            <p class="card-text flex-grow-1">High capacity power bank with fast charging.</p>
+                            <h4 class="product-price">Rs. 4,999</h4>
+                            <div class="d-flex gap-2">
+                                <button class="btn-green w-50" onclick="userCart('Anker Power Bank 20000mAh')">Add to Cart</button>
+                                <button class="btn-outline-green w-50" onclick="userProduct('Anker Power Bank 20000mAh')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 fade-up">
+                    <div class="card h-100">
+                        <img src="/assets/keyboard.png" class="card-img-top" alt="Logitech Keyboard & Mouse Combo">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Logitech Keyboard & Mouse Combo</h5>
+                            <p class="card-text flex-grow-1">Ergonomic wireless keyboard and mouse combo.</p>
+                            <h4 class="product-price">Rs. 3,799</h4>
+                            <div class="d-flex gap-2">
+                                <button class="btn-green w-50" onclick="userCart('Logitech Keyboard & Mouse Combo')">Add to Cart</button>
+                                <button class="btn-outline-green w-50" onclick="userProduct('Logitech Keyboard & Mouse Combo')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 fade-up">
+                    <div class="card h-100">
+                        <img src="/assets/cadbury.png" class="card-img-top" alt="Cadbury Dairy Milk 90g">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Cadbury Dairy Milk 90g</h5>
+                            <p class="card-text flex-grow-1">Rich milk chocolate with creamy texture.</p>
+                            <h4 class="product-price">Rs. 220</h4>
+                            <div class="d-flex gap-2">
+                                <button class="btn-green w-50" onclick="userCart('Cadbury Dairy Milk 90g')">Add to Cart</button>
+                                <button class="btn-outline-green w-50" onclick="userProduct('Cadbury Dairy Milk 90g')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 fade-up">
+                    <div class="card h-100">
+                        <img src="/assets/soap.png" class="card-img-top" alt="Golden Pearl Beauty Soap">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Golden Pearl Beauty Soap</h5>
+                            <p class="card-text flex-grow-1">Glowing skin formula with fairness extract.</p>
+                            <h4 class="product-price">Rs. 85</h4>
+                            <div class="d-flex gap-2">
+                                <button class="btn-green w-50" onclick="userCart('Golden Pearl Beauty Soap')">Add to Cart</button>
+                                <button class="btn-outline-green w-50" onclick="userProduct('Golden Pearl Beauty Soap')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 fade-up">
+                    <div class="card h-100">
+                        <img src="/assets/dettol.png" class="card-img-top" alt="Dettol Hand Sanitizer 50ml">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Detol Hand Sanitizer 50ml</h5>
+                            <p class="card-text flex-grow-1">Instant hand sanitizer kills 99.9% of germs.</p>
+                            <h4 class="product-price">Rs. 120</h4>
+                            <div class="d-flex gap-2">
+                                <button class="btn-green w-50" onclick="userCart('Dettol Hand Sanitizer 50ml')">Add to Cart</button>
+                                <button class="btn-outline-green w-50" onclick="userProduct('Dettol Hand Sanitizer 50ml')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 21 -->
+                <div class="col-md-6 col-lg-3 fade-up">
+                    <div class="card h-100">
+                        <img src="/assets/item21.png" class="card-img-top" alt="Pampers Baby Diapers">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Pampers Baby Diapers</h5>
+                            <p class="card-text flex-grow-1">Extra absorbent diapers for baby's comfort.</p>
+                            <h4 class="product-price">Rs. 1,499</h4>
+                            <div class="d-flex gap-2">
+                                <button class="btn-green w-50" onclick="userCart('Pampers Baby Diapers')">Add to Cart</button>
+                                <button class="btn-outline-green w-50" onclick="userProduct('Pampers Baby Diapers')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 22 -->
+                <div class="col-md-6 col-lg-3 fade-up">
+                    <div class="card h-100">
+                        <img src="/assets/item22.png" class="card-img-top" alt="Samsung Microwave 23L">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Samsung Microwave 23L</h5>
+                            <p class="card-text flex-grow-1">Digital microwave with defrosting technology.</p>
+                            <h4 class="product-price">Rs. 26,999</h4>
+                            <div class="d-flex gap-2">
+                                <button class="btn-green w-50" onclick="userCart('Samsung Microwave 23L')">Add to Cart</button>
+                                <button class="btn-outline-green w-50" onclick="userProduct('Samsung Microwave 23L')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 23 -->
+                <div class="col-md-6 col-lg-3 fade-up">
+                    <div class="card h-100">
+                        <img src="/assets/item23.png" class="card-img-top" alt="Canon DSLR Camera">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Canon DSLR Camera</h5>
+                            <p class="card-text flex-grow-1">18MP digital camera with 18-55mm lens kit.</p>
+                            <h4 class="product-price">Rs. 72,999</h4>
+                            <div class="d-flex gap-2">
+                                <button class="btn-green w-50" onclick="userCart('Canon DSLR Camera')">Add to Cart</button>
+                                <button class="btn-outline-green w-50" onclick="userProduct('Canon DSLR Camera')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 24 -->
+                <div class="col-md-6 col-lg-3 fade-up">
+                    <div class="card h-100">
+                        <img src="/assets/item24.png" class="card-img-top" alt="Philips Hair Dryer">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Philips Hair Dryer</h5>
+                            <p class="card-text flex-grow-1">ThermoProtect hair dryer with 3 heat settings.</p>
+                            <h4 class="product-price">Rs. 5,199</h4>
+                            <div class="d-flex gap-2">
+                                <button class="btn-green w-50" onclick="userCart('Philips Hair Dryer')">Add to Cart</button>
+                                <button class="btn-outline-green w-50" onclick="userProduct('Philips Hair Dryer')">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+    </section>
+    <footer class="bg-light pt-5 pb-4 border-top">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="mb-3 text-success">SwiftBasket</h5>
+                    <p class="text-muted small">Your marketplace to reach millions. Replace with business info.</p>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6>Shop</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-decoration-none text-muted">All Products</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Categories</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Top Rated</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6>Company</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-decoration-none text-muted">About</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Careers</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6>Support</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-decoration-none text-muted">Help Center</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Contact</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6>Follow</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-decoration-none text-muted">Facebook</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Twitter</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-4 small text-muted">
+                &copy; 2025 SwiftBasket. All rights reserved. | Made with ❤️ by <b>Ahrar Shah</b>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"></script>
+<script src="/js/shop.js"></script>
+</html>

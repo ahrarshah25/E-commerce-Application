@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | SwiftBasket</title>
+    <link rel="stylesheet" href="/css/cart.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body onload="loadCart()">
+
+    <nav class="navbar navbar-dark bg-dark small-nav py-2">
+        <div class="container d-flex justify-content-between text-white small">
+            <span>Sell on SwiftBasket</span>
+            <span>Help & Contact</span>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3 sticky-top nav-animated">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <img src="/assets/logo.png" alt="logo" style="height:40px;" class="me-2">
+                <span class="brand-text">SwiftBasket</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav me-auto ms-4">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button"
+                            data-bs-toggle="dropdown">Categories</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Electronics</a></li>
+                            <li><a class="dropdown-item" href="#">Fashion</a></li>
+                            <li><a class="dropdown-item" href="#">Groceries</a></li>
+                            <li><a class="dropdown-item" href="#">Gift Items</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+                </ul>
+                <form class="d-flex mx-lg-3 mb-3 mb-lg-0 search-wrapper">
+                    <input class="form-control me-2" type="search"
+                        placeholder="Search for products, categories or shops">
+                    <button class="btn btn-success">Search</button>
+                </form>
+                <ul class="navbar-nav ms-lg-3">
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="login.html">Log In</a></li>
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="cart.html">Cart</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-5">
+        <h2 class="fw-bold mb-4 fade-up">Your Cart</h2>
+        <div id="cart-container" class="row g-4"></div>
+        <div id="empty-cart" class="text-center py-5 d-none fade-up">
+            <h4>Your cart is empty</h4>
+            <a href="product.html" class="btn btn-success mt-3">Start Shopping</a>
+        </div>
+        <div id="cart-summary" class="mt-5 d-none fade-up">
+            <h5 class="fw-bold mb-3">Order Summary</h5>
+            <p>Subtotal: <span id="subtotal">0.00</span></p>
+            <h6>Total: <span id="total">10.00</span></h6>
+            <button onclick="checkout()" class="btn btn-success w-100 mt-3">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script src="cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"></script>
+    <script src="/js/cart.js"></script>
+</html>

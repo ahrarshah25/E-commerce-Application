@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — SwiftBasket</title>
+    <link rel="stylesheet" href="/css/contact.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="py-3 bg-success text-white text-center">
+        <h1>SwiftBasket Support</h1>
+        <p class="mb-0">We’re here to assist you!</p>
+    </header>
+    <section class="contact-section py-5">
+        <div class="container shadow-lg rounded p-5 bg-white">
+            <div class="row g-5">
+                <div class="col-md-5">
+                    <h3 class="mb-4">Contact Information</h3>
+                    <p class="text-muted mb-4">Feel free to reach out to us through any of these channels.</p>
+
+                    <div class="info-item d-flex align-items-center mb-3">
+                        <div class="icon-box">
+                            📞
+                        </div>
+                        <div>
+                            <p class="mb-0 fw-bold">Phone:</p>
+                            <span class="text-muted">+92 300 1234567</span>
+                        </div>
+                    </div>
+                    <div class="info-item d-flex align-items-center mb-3">
+                        <div class="icon-box">
+                            ✉️
+                        </div>
+                        <div>
+                            <p class="mb-0 fw-bold">Email:</p>
+                            <span class="text-muted">support@swiftbasket.com</span>
+                        </div>
+                    </div>
+                    <div class="info-item d-flex align-items-center">
+                        <div class="icon-box">
+                            📍
+                        </div>
+                        <div>
+                            <p class="mb-0 fw-bold">Address:</p>
+                            <span class="text-muted">Online Store!</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <h3 class="mb-4">Send Us a Message</h3>
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label fw-semibold">Full Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your full name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-semibold">Email Address</label>
+                            <input type="text" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label fw-semibold">Message</label>
+                            <textarea class="form-control" id="message" rows="5"
+                                placeholder="Write your message"></textarea>
+                        </div>
+                        <button onclick="userContact(event)" type="submit" class="btn btn-success px-4 py-2 fw-semibold">Send Message</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="bg-light pt-5 pb-4 border-top">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="mb-3 text-success">SwiftBasket</h5>
+                    <p class="text-muted small">Your marketplace to reach millions. Replace with business info.</p>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6>Shop</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-decoration-none text-muted">All Products</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Categories</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Top Rated</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6>Company</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-decoration-none text-muted">About</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Careers</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6>Support</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-decoration-none text-muted">Help Center</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Contact</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2">
+                    <h6>Follow</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-decoration-none text-muted">Facebook</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Twitter</a></li>
+                        <li><a href="#" class="text-decoration-none text-muted">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-4 small text-muted">
+                &copy; 2025 SwiftBasket. All rights reserved. | Made with ❤️ by <b>Ahrar Shah</b>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"></script>
+<script src="/js/contact.js"></script>
+</html>

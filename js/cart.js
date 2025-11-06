@@ -245,7 +245,7 @@ function loadCart() {
     }else if(item === "Pampers Baby Diapers"){
             box.innerHTML = `
             <div class="card shadow-sm p-3 lift-on-hover">
-                <img src="/assets/disaper.png" class="card-img-top" alt="Pampers Baby Diapers">
+                <img src="/assets/diapers.png" class="card-img-top" alt="Pampers Baby Diapers">
                 <h6 class="mt-3">Pampers Baby Diapers</h6>
                 <p class="text-muted">Rs. 1,499</p>
                 <button class="btn btn-outline-danger btn-sm" onclick="removeItem(${i})">Remove</button>

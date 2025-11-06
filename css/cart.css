@@ -76,3 +76,32 @@
     object-fit: cover;
     border-radius: 6px;
 }
+.profile-circle {
+    position: relative;
+    cursor: pointer;
+}
+
+.profile-circle img {
+    border: 2px solid #ddd;
+    transition: 0.3s ease-in-out;
+}
+
+.profile-circle:hover img {
+    border-color: #28a745;
+}
+
+.logout-btn {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #dc3545;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.hidden{
+    display: none;
+}

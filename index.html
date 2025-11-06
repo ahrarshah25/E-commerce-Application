@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>SwiftBasket</title>
     <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/shop.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
@@ -17,6 +18,7 @@
             <span>Help & Contact</span>
         </div>
     </nav>
+
     <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3 sticky-top nav-animated">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">
@@ -49,9 +51,16 @@
                         placeholder="Search for products, categories or shops">
                     <button class="btn btn-success">Search</button>
                 </form>
-                <ul class="navbar-nav ms-lg-3">
+                <ul class="navbar-nav ms-lg-3 align-items-center">
                     <li class="nav-item"><a class="nav-link fw-semibold" href="login.html">Log In</a></li>
                     <li class="nav-item"><a class="nav-link fw-semibold" href="cart.html">Cart</a></li>
+                    <li id="userProfile" class="nav-item position-relative ms-3 hidden">
+                        <div class="profile-circle">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile" class="rounded-circle" width="40"
+                                height="40">
+                            <button class="logout-btn" onclick="userLogout()">Logout</button>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -74,7 +83,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6 slide-right">
-                            <img src="/assets/6911706.jpg" class="img-fluid rounded" alt="hero">
+                            <img src="/assets/girl1.png" class="img-fluid rounded" alt="hero">
                         </div>
                     </div>
                 </div>
@@ -94,7 +103,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6 slide-right">
-                            <img src="assets/6832220.jpg" class="img-fluid rounded" alt="hero">
+                            <img src="assets/sale.png" class="img-fluid rounded" alt="hero">
                         </div>
                     </div>
                 </div>
@@ -118,52 +127,56 @@
         <div class="row g-4">
             <div class="col-6 col-md-3">
                 <div class="card product-card lift-on-hover fade-up">
-                    <img src="https://via.placeholder.com/300x260?text=Top+Rated+1" class="card-img-top" alt="product1">
+                    <img src="assets/microwave.png" class="card-img-top" alt="product1">
                     <div class="card-body">
-                        <h6 class="card-title mb-1">Product Name 1</h6>
-                        <p class="text-muted small mb-2">Short brand / category</p>
+                        <h6 class="card-title mb-1">Samsung Microwave 23L</h6>
+                        <p class="text-muted small mb-2">Digital microwave with defrosting technology.</p>
+                        <h4 class="product-price">Rs. 26,999</h4>
                         <div class="d-flex gap-2">
-                            <button class="btn btn-success btn-sm flex-fill">Buy Now</button>
-                            <button class="btn btn-outline-secondary btn-sm flex-fill">Add to Cart</button>
+                            <button onclick="userProduct('Samsung Microwave 23L')" class="btn btn-success btn-sm flex-fill">Buy Now</button>
+                            <button onclick="userCart('Samsung Microwave 23L')" class="btn btn-outline-secondary btn-sm flex-fill">Add to Cart</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-6 col-md-3">
                 <div class="card product-card lift-on-hover fade-up" style="animation-delay:0.08s">
-                    <img src="https://via.placeholder.com/300x260?text=Top+Rated+2" class="card-img-top" alt="product2">
+                    <img src="/assets/speaker.png" class="card-img-top" alt="product2">
                     <div class="card-body">
-                        <h6 class="card-title mb-1">Product Name 2</h6>
-                        <p class="text-muted small mb-2">Short brand / category</p>
+                        <h6 class="card-title mb-1">JBL Bluetooth Speaker</h6>
+                        <p class="text-muted small mb-2">Portable speaker with deep bass and long battery life.</p>
+                        <h4 class="product-price">9,799</h4>
                         <div class="d-flex gap-2">
-                            <button class="btn btn-success btn-sm flex-fill">Buy Now</button>
-                            <button class="btn btn-outline-secondary btn-sm flex-fill">Add to Cart</button>
+                            <button onclick="userProduct('JBL Bluetooth Speaker')" class="btn btn-success btn-sm flex-fill">Buy Now</button>
+                            <button onclick="userCart('JBL Bluetooth Speaker')" class="btn btn-outline-secondary btn-sm flex-fill">Add to Cart</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-6 col-md-3">
                 <div class="card product-card lift-on-hover fade-up" style="animation-delay:0.16s">
-                    <img src="https://via.placeholder.com/300x260?text=Top+Rated+3" class="card-img-top" alt="product3">
+                    <img src="/assets/shoes.png" class="card-img-top" alt="product3">
                     <div class="card-body">
-                        <h6 class="card-title mb-1">Product Name 3</h6>
-                        <p class="text-muted small mb-2">Short brand / category</p>
+                        <h6 class="card-title mb-1">Nike Running Shoes</h6>
+                        <p class="text-muted small mb-2">Lightweight and breathable sports shoes.</p>
+                        <h4 class="product-price">13,999</h4>
                         <div class="d-flex gap-2">
-                            <button class="btn btn-success btn-sm flex-fill">Buy Now</button>
-                            <button class="btn btn-outline-secondary btn-sm flex-fill">Add to Cart</button>
+                            <button onclick="userProduct('Nike Running Shoes')" class="btn btn-success btn-sm flex-fill">Buy Now</button>
+                            <button onclick="userCart('Nike Running Shoes')" class="btn btn-outline-secondary btn-sm flex-fill">Add to Cart</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-6 col-md-3">
                 <div class="card product-card lift-on-hover fade-up" style="animation-delay:0.24s">
-                    <img src="https://via.placeholder.com/300x260?text=Top+Rated+4" class="card-img-top" alt="product4">
+                    <img src="/assets/earbuds.png" class="card-img-top" alt="product4">
                     <div class="card-body">
-                        <h6 class="card-title mb-1">Product Name 4</h6>
-                        <p class="text-muted small mb-2">Short brand / category</p>
+                        <h6 class="card-title mb-1">Wireless Earbuds</h6>
+                        <p class="text-muted small mb-2">Bluetooth earbuds with noise cancellation feature.</p>
+                        <h4 class="product-price">2,499</h4>
                         <div class="d-flex gap-2">
-                            <button class="btn btn-success btn-sm flex-fill">Buy Now</button>
-                            <button class="btn btn-outline-secondary btn-sm flex-fill">Add to Cart</button>
+                            <button onclick="userProduct('Wireless Earbuds')" class="btn btn-success btn-sm flex-fill">Buy Now</button>
+                            <button onclick="userCart('Wireless Earbuds')" class="btn btn-outline-secondary btn-sm flex-fill">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -179,14 +192,14 @@
         <div class="row g-4">
             <div class="col-12 col-md-4">
                 <div class="card h-100 lift-on-hover fade-up" style="animation-delay:0.02s">
-                    <img src="https://via.placeholder.com/520x320?text=New+1" class="card-img-top" alt="new1">
+                    <img src="/assets/powerbank.png" class="card-img-top" alt="new1">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">New Product 1</h5>
-                        <p class="card-text text-muted small">A short description that highlights features and why
-                            buyers love it.</p>
+                        <h5 class="card-title">Anker Power Bank 20000mAh</h5>
+                        <p class="card-text text-muted small">High capacity power bank with fast charging.</p>
+                        <h4 class="product-price">4,999</h4>
                         <div class="mt-auto d-flex gap-2">
-                            <button class="btn btn-success flex-fill">Buy Now</button>
-                            <button class="btn btn-outline-secondary flex-fill">Add to Cart</button>
+                            <button onclick="userProduct('Anker Power Bank 20000mAh')" class="btn btn-success flex-fill">Buy Now</button>
+                            <button onclick="userCart('Anker Power Bank 20000mAh')" class="btn btn-outline-secondary flex-fill">Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -194,70 +207,29 @@
 
             <div class="col-12 col-md-4">
                 <div class="card h-100 lift-on-hover fade-up" style="animation-delay:0.1s">
-                    <img src="https://via.placeholder.com/520x320?text=New+2" class="card-img-top" alt="new2">
+                    <img src="/assets/laptop.png" class="card-img-top" alt="new2">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">New Product 2</h5>
-                        <p class="card-text text-muted small">A short description that highlights features and why
-                            buyers love it.</p>
+                        <h5 class="card-title">HP Laptop 15s</h5>
+                        <p class="card-text text-muted small">Intel i5, 8GB RAM, 512GB SSD with Windows 11.</p>
+                        <h4 class="product-price">154,999</h4>
                         <div class="mt-auto d-flex gap-2">
-                            <button class="btn btn-success flex-fill">Buy Now</button>
-                            <button class="btn btn-outline-secondary flex-fill">Add to Cart</button>
+                            <button onclick="userProduct('HP Laptop 15s')" class="btn btn-success flex-fill">Buy Now</button>
+                            <button onclick="userCart('HP Laptop 15s')" class="btn btn-outline-secondary flex-fill">Add to Cart</button>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-12 col-md-4">
                 <div class="card h-100 lift-on-hover fade-up" style="animation-delay:0.18s">
-                    <img src="https://via.placeholder.com/520x320?text=New+3" class="card-img-top" alt="new3">
+                    <img src="/assets/iphone.png" class="card-img-top" alt="new3">
                     <div class="card-body d-flex flex-column">
-                        <h5 class="card-title">New Product 3</h5>
-                        <p class="card-text text-muted small">A short description that highlights features and why
-                            buyers love it.</p>
+                        <h5 class="card-title">Apple iPhone 13</h5>
+                        <p class="card-text text-muted small">256GB, Super Retina XDR display smartphone.</p>
+                        <h4 class="product-price">329,999</h4>
                         <div class="mt-auto d-flex gap-2">
-                            <button class="btn btn-success flex-fill">Buy Now</button>
-                            <button class="btn btn-outline-secondary flex-fill">Add to Cart</button>
+                            <button onclick="userProduct('Apple iPhone 13')" class="btn btn-success flex-fill">Buy Now</button>
+                            <button onclick="userCart('Apple iPhone 13')" class="btn btn-outline-secondary flex-fill">Add to Cart</button>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="container my-5">
-        <div class="d-flex align-items-center justify-content-between mb-3">
-            <h3 class="fw-bold">Top Sellers</h3>
-            <small class="text-muted">Most popular brands</small>
-        </div>
-
-        <div class="row g-4">
-            <div class="col-12 col-md-4">
-                <div class="d-flex gap-3 align-items-start lift-on-hover fade-up" style="animation-delay:0.03s">
-                    <img src="https://via.placeholder.com/120x80?text=Brand+1" alt="brand1" class="rounded">
-                    <div>
-                        <h6 class="mb-1">Brand Name A</h6>
-                        <div class="stars mb-1">★★★★★</div>
-                        <p class="small text-muted mb-0">Short description of the company's top selling items.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-4">
-                <div class="d-flex gap-3 align-items-start lift-on-hover fade-up" style="animation-delay:0.08s">
-                    <img src="https://via.placeholder.com/120x80?text=Brand+2" alt="brand2" class="rounded">
-                    <div>
-                        <h6 class="mb-1">Brand Name B</h6>
-                        <div class="stars mb-1">★★★★☆</div>
-                        <p class="small text-muted mb-0">Short description of the company's top selling items.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-4">
-                <div class="d-flex gap-3 align-items-start lift-on-hover fade-up" style="animation-delay:0.13s">
-                    <img src="https://via.placeholder.com/120x80?text=Brand+3" alt="brand3" class="rounded">
-                    <div>
-                        <h6 class="mb-1">Brand Name C</h6>
-                        <div class="stars mb-1">★★★★★</div>
-                        <p class="small text-muted mb-0">Short description of the company's top selling items.</p>
                     </div>
                 </div>
             </div>
@@ -279,21 +251,14 @@
             </div>
         </div>
     </section>
-    <footer class="bg-light pt-5 pb-4">
+    <footer class="bg-light pt-5 pb-4 border-top">
         <div class="container">
             <div class="row g-4">
                 <div class="col-md-4">
-                    <h5 class="mb-3">SwiftBasket</h5>
-                    <p class="text-muted small">Your marketplace to reach millions. Replace this with your description
-                        and contact info.</p>
-                    <div class="d-flex gap-2 fs-4">
-                        <span title="phone">📞</span>
-                        <span title="email">✉️</span>
-                        <span title="location">📍</span>
-                    </div>
+                    <h5 class="mb-3 text-success">SwiftBasket</h5>
+                    <p class="text-muted small">Your marketplace to reach millions. Replace with business info.</p>
                 </div>
-
-                <div class="col-md-2">
+                <div class="col-6 col-md-2">
                     <h6>Shop</h6>
                     <ul class="list-unstyled small">
                         <li><a href="#" class="text-decoration-none text-muted">All Products</a></li>
@@ -301,8 +266,7 @@
                         <li><a href="#" class="text-decoration-none text-muted">Top Rated</a></li>
                     </ul>
                 </div>
-
-                <div class="col-md-2">
+                <div class="col-6 col-md-2">
                     <h6>Company</h6>
                     <ul class="list-unstyled small">
                         <li><a href="#" class="text-decoration-none text-muted">About</a></li>
@@ -310,8 +274,7 @@
                         <li><a href="#" class="text-decoration-none text-muted">Blog</a></li>
                     </ul>
                 </div>
-
-                <div class="col-md-2">
+                <div class="col-6 col-md-2">
                     <h6>Support</h6>
                     <ul class="list-unstyled small">
                         <li><a href="#" class="text-decoration-none text-muted">Help Center</a></li>
@@ -319,8 +282,7 @@
                         <li><a href="#" class="text-decoration-none text-muted">Returns</a></li>
                     </ul>
                 </div>
-
-                <div class="col-md-2">
+                <div class="col-6 col-md-2">
                     <h6>Follow</h6>
                     <ul class="list-unstyled small">
                         <li><a href="#" class="text-decoration-none text-muted">Facebook</a></li>
@@ -329,10 +291,8 @@
                     </ul>
                 </div>
             </div>
-
-            <div class="border-top mt-4 pt-3 small text-muted d-flex justify-content-between">
-                <div>&copy; <span id="year">2025</span> SkyGarden. All rights reserved.</div>
-                <div>Made By <a href="https://github.com/ahrarshah25" class="text-black">Ahrar Shah</a></div>
+            <div class="text-center mt-4 small text-muted">
+                &copy; 2025 SwiftBasket. All rights reserved. | Made with ❤️ by <b>Ahrar Shah</b>
             </div>
         </div>
     </footer>
@@ -343,5 +303,5 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
     integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
     crossorigin="anonymous"></script>
-
+<script src="/js/shop.js"></script>
 </html>

@@ -18,6 +18,7 @@
             <span>Help & Contact</span>
         </div>
     </nav>
+
     <nav class="navbar navbar-expand-lg bg-white shadow-sm py-3 sticky-top nav-animated">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">
@@ -50,9 +51,16 @@
                         placeholder="Search for products, categories or shops">
                     <button class="btn btn-success">Search</button>
                 </form>
-                <ul class="navbar-nav ms-lg-3">
+                <ul class="navbar-nav ms-lg-3 align-items-center">
                     <li class="nav-item"><a class="nav-link fw-semibold" href="login.html">Log In</a></li>
                     <li class="nav-item"><a class="nav-link fw-semibold" href="cart.html">Cart</a></li>
+                    <li class="nav-item position-relative ms-3 hidden">
+                        <div class="profile-circle">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Profile" class="rounded-circle" width="40"
+                                height="40">
+                            <button class="logout-btn" onclick="userLogout()">Logout</button>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -342,11 +350,9 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- 21 -->
                 <div class="col-md-6 col-lg-3 fade-up">
                     <div class="card h-100">
-                        <img src="/assets/item21.png" class="card-img-top" alt="Pampers Baby Diapers">
+                        <img src="/assets/diapers.png" class="card-img-top" alt="Pampers Baby Diapers">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Pampers Baby Diapers</h5>
                             <p class="card-text flex-grow-1">Extra absorbent diapers for baby's comfort.</p>
@@ -358,11 +364,9 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- 22 -->
                 <div class="col-md-6 col-lg-3 fade-up">
                     <div class="card h-100">
-                        <img src="/assets/item22.png" class="card-img-top" alt="Samsung Microwave 23L">
+                        <img src="/assets/microwave.png" class="card-img-top" alt="Samsung Microwave 23L">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Samsung Microwave 23L</h5>
                             <p class="card-text flex-grow-1">Digital microwave with defrosting technology.</p>
@@ -374,11 +378,9 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- 23 -->
                 <div class="col-md-6 col-lg-3 fade-up">
                     <div class="card h-100">
-                        <img src="/assets/item23.png" class="card-img-top" alt="Canon DSLR Camera">
+                        <img src="/assets/camera.png" class="card-img-top" alt="Canon DSLR Camera">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Canon DSLR Camera</h5>
                             <p class="card-text flex-grow-1">18MP digital camera with 18-55mm lens kit.</p>
@@ -390,11 +392,9 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- 24 -->
                 <div class="col-md-6 col-lg-3 fade-up">
                     <div class="card h-100">
-                        <img src="/assets/item24.png" class="card-img-top" alt="Philips Hair Dryer">
+                        <img src="/assets/hairdryer.png" class="card-img-top" alt="Philips Hair Dryer">
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title">Philips Hair Dryer</h5>
                             <p class="card-text flex-grow-1">ThermoProtect hair dryer with 3 heat settings.</p>

@@ -1,0 +1,123 @@
+:root {
+    --accent: #1aa66a;
+    --soft: #f7f7f7;
+    --muted: #6c757d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--soft);
+    display: flex;
+    justify-content: center;
+    padding: 40px 15px;
+}
+
+.checkout-container {
+    width: 100%;
+    max-width: 600px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+h2 {
+    color: #111;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 6px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--accent);
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+.subtotal {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    padding: 12px;
+    background: #f5f5f5;
+    border-radius: 6px;
+}
+
+.extra-methods {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.method-icons img {
+    height: 35px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.method-icons img:hover {
+    transform: scale(1.1);
+}
+
+.btn-place-order {
+    width: 100%;
+    padding: 14px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.btn-place-order:hover {
+    background: #158a57;
+    transform: translateY(-3px);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media(max-width: 480px) {
+    .method-icons img {
+        height: 28px;
+        margin: 5px;
+    }
+}
+
+.hidden{
+    display: none;
+};

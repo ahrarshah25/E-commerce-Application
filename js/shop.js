@@ -18,8 +18,13 @@ function userCart(cartProduct) {
         window.location.href = "login.html";
     }else{
     alert(cartProduct + " added to cart successfully!");
-    let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
+    var cart = JSON.parse(localStorage.getItem("cartItems")) || [];
     cart.push(cartProduct);
     localStorage.setItem("cartItems", JSON.stringify(cart));
     }
-}
+};
+
+function userProduct(userOrderProduct){
+    localStorage.setItem("userOrderProduct" , userOrderProduct);
+    window.location.href = "checkout.html";
+};

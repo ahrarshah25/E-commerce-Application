@@ -21,7 +21,8 @@
             <form>
                 <input type="text" id="email" placeholder="Email">
                 <input type="password" id="password" placeholder="Password">
-                <button onclick="userLogin(event)" type="submit" class="btn">Login</button>
+                <span id="toggle-password" class="toggle-password">Show</span>
+                <button id="userLogin" type="submit" class="btn">Login</button>
             </form>
 
             <p class="toggle-text">
@@ -31,5 +32,5 @@
         </div>
     </div>
 </body>
-<script src="/js/login.js"></script>
+<script type="module" src="/js/login.js"></script>
 </html>

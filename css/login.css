@@ -130,3 +130,21 @@ input:focus {
     from { transform: translateY(50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
+
+.toggle-password {
+    /* position: absolute; */
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--muted);
+    font-size: 0.9rem;
+    user-select: none;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    margin: auto;
+}
+#toogle-password:hover {
+    color: var(--accent);
+}
